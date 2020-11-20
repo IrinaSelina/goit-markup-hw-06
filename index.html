@@ -75,6 +75,10 @@
           <div data-modal class="backdrop is-hidden">
             <div class="modal">
               <button data-modal-close>X</button>
+              <!-- форма в модальном окне -->
+              <h2 class="modal-titel">
+                Оставьте свои данные, мы вам перезвоним
+              </h2>
               <form class="form modal-form">
                 <div class="form-field">
                   <label class="form-label" for="name">Имя</label>
@@ -87,7 +91,7 @@
                     />
                     <span>
                       <svg class="form-inpyt-svg">
-                        <use href="./img/symbol-defs.svg#envelope"></use>
+                        <use href="./img/symbol-defs.svg#Vector"></use>
                       </svg>
                     </span>
                   </div>
@@ -95,22 +99,37 @@
 
                 <div class="form-field">
                   <label class="form-label" for="tel">Телефон</label>
-                  <input class="form-input" type="tel" name="tel" id="tel" />
+                  <div class="form-svg">
+                    <input class="form-input" type="tel" name="tel" id="tel" />
+                    <span>
+                      <svg class="form-inpyt-svg">
+                        <use href="./img/symbol-defs.svg#Tel"></use>
+                      </svg>
+                    </span>
+                  </div>
                 </div>
 
                 <div class="form-field">
                   <label class="form-label" for="email">Почта</label>
-                  <input
-                    class="form-input"
-                    type="email"
-                    name="email"
-                    id="email"
-                  />
+                  <div class="form-svg">
+                    <input
+                      class="form-input"
+                      type="email"
+                      name="email"
+                      id="email"
+                    />
+                    <span>
+                      <svg class="form-inpyt-svg">
+                        <use href="./img/symbol-defs.svg#Email"></use>
+                      </svg>
+                    </span>
+                  </div>
                 </div>
 
                 <div class="form-field">
                   <label class="form-label" for="coment">Комментарий</label>
                   <textarea
+                    class="form-coment"
                     name="coment"
                     id="coment"
                     cols="30"
@@ -120,16 +139,17 @@
                 </div>
 
                 <div class="form-field-check">
-                  <input
-                    class="form-input-check"
-                    type="checkbox"
-                    name="agreed"
-                    id="agreed"
-                  />
-                  <label class="form-label" for="agreed"
-                    >Соглашаюсь с рассылкой и принимаю</label
-                  >
-                  <a href="">Условия договора</a>
+                  <label class="form-label" for="agreed">
+                    <input
+                      class="form-input-check"
+                      type="checkbox"
+                      name="agreed"
+                      id="agreed"
+                    />
+                    <span class="check"></span>
+                    Соглашаюсь с рассылкой и принимаю
+                    <a class="agreed" href="">Условия договора</a>
+                  </label>
                 </div>
 
                 <button class="check-button" type="submit">Отправить</button>
@@ -426,42 +446,42 @@
             <li class="customed-item">
               <a class="customed-link" href="" target="blank">
                 <svg class="customed-link-svg">
-                  <use href="./img/symbol-defs2.svg#logo1"></use>
+                  <use href="./img/symbol-defs.svg#logo1"></use>
                 </svg>
               </a>
             </li>
             <li class="customed-item">
               <a class="customed-link" href="" target="blank">
                 <svg class="customed-link-svg">
-                  <use href="./img/symbol-defs2.svg#logo2"></use>
+                  <use href="./img/symbol-defs.svg#logo2"></use>
                 </svg>
               </a>
             </li>
             <li class="customed-item">
               <a class="customed-link" href="" target="blank">
                 <svg class="customed-link-svg">
-                  <use href="./img/symbol-defs2.svg#logo3"></use>
+                  <use href="./img/symbol-defs.svg#logo3"></use>
                 </svg>
               </a>
             </li>
             <li class="customed-item">
               <a class="customed-link" href="" target="blank">
                 <svg class="customed-link-svg">
-                  <use href="./img/symbol-defs2.svg#logo4"></use>
+                  <use href="./img/symbol-defs.svg#logo4"></use>
                 </svg>
               </a>
             </li>
             <li class="customed-item">
               <a class="customed-link" href="" target="blank">
                 <svg class="customed-link-svg">
-                  <use href="./img/symbol-defs2.svg#logo5"></use>
+                  <use href="./img/symbol-defs.svg#logo5"></use>
                 </svg>
               </a>
             </li>
             <li class="customed-item">
               <a class="customed-link" href="" target="blank">
                 <svg class="customed-link-svg">
-                  <use href="./img/symbol-defs2.svg#logo6"></use>
+                  <use href="./img/symbol-defs.svg#logo6"></use>
                 </svg>
               </a>
             </li>
@@ -502,14 +522,19 @@
             <li><a class="join linkedin" href=""></a></li>
           </ul>
         </div>
-        <div>
+        <div class="footer-subscribe">
           <b>ПОДПИШИТЕСЬ НА РАССЫЛКУ</b>
-          <form>
-            <label>
-              <input type="text" />
+          <form class="form-footer">
+            <label class="footer-label">
+              <input class="foter-input" type="email" placeholder="E-mail" />
             </label>
 
-            <button type="submit">Подписаться</button>
+            <button class="button-subscribe" type="submit">
+              <svg class="footer-subscribe-svg" widt="24px" height="24px">
+                <use href="./img/symbol-defs.svg#send"></use>
+              </svg>
+              Подписаться
+            </button>
           </form>
         </div>
       </div>
